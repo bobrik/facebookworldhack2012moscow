@@ -1,0 +1,15 @@
+#gameCreation {
+    width: 90%;
+    margin: 40px auto;
+}
+
+#startGame {
+    display: inline-block;
+    width:100%;
+    padding: 20px 0;
+    color: #AFB225;
+    border: 1px dotted #AFB225;
+    border-radius: 10px;
+    text-align: center;
+    background: #f3f1e5;
+}

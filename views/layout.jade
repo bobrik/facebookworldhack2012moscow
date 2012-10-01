@@ -1,7 +1,22 @@
 doctype 5
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+      block head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(src='/js/hang.js')
+        block page
+        script(type="text/javascript")
+            document.addEventListener("DOMContentLoaded", function(){
+                document.removeEventListener( "DOMContentLoaded", arguments.callee, false);
+                H.init("#{pageName}");
+            });
   body
+    div#bar
+        include buttons
     block content
+    div#overlay
+    div#popup
+        div.title
+        a.close(href="javascript:;")
+        div.content

@@ -4,20 +4,33 @@
         http      = require('http'),
         path      = require('path'),
         everyauth = require("everyauth"),
-        io        = require("socket.io");
+        io        = require("socket.io"),
+        User      = require("./lib/User");
 
     everyauth
         .facebook
-            .appId('278419445602379')
-            .appSecret('12f8ecb27bd56b2f76cefeb177980c1b')
+            .appId('226112007518642')
+            .appSecret('76af7f166373601ceb7089e16bfbcb10')
             .findOrCreateUser(function(session, token, extra, user) {
                 session.fb_token = token;
                 session.fb_id    = user.id;
 
+                var user = new User(user.id);
+                user.load(function(error) {
+                    if (error) {
+                        console.log(error);
+                        return;
+                    }
+
+                    user.setFacebookToken(token);
+                    user.setName(user.name);
+                    user.save();
+                });
+
                 return {
                     fb_token : token,
                     fb_id    : user.id
-                };
+                }
             })
             .redirectPath('/');
 
@@ -29,7 +42,7 @@
     var app = express();
 
     app.configure('all', function() {
-        app.set('port', process.env.PORT || 3000);
+        app.set('port', process.env.PORT || 80);
         app.set('views', __dirname + '/views');
         app.set('view engine', 'jade');
         app.use(express.favicon());
@@ -51,6 +64,15 @@
     });
 
     app.get("/", routes.index);
+    app.get("/auth", routes.auth);
+    app.get("/start", routes.start);
+    app.get("/games", routes.games);
+    app.get("/game", routes.game);
+    app.get("/move", routes.move);
+    app.get("/create", routes.create);
+    app.get("/reply", routes.reply);
+    app.get("/og_player", routes.og_player);
+
 
     var server = http.createServer(app);
 
