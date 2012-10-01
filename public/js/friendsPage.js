@@ -1,6 +1,8 @@
 H.pages.friendsPage = function() {
     var list = document.querySelector("ul.itemList");
+    H.initFbAPI();
     list.addEventListener("click", function(event){
+
         list.removeEventListener("click");
 
         var cnt = "";
@@ -28,18 +30,16 @@ H.pages.friendsPage = function() {
                     });
 
                 } else {
-                    H.initFbAPI(function(){
-                        FB.ui({method: 'apprequests',
-                            message: 'Hey! Play with me!',
-                            to: elm.dataset.fbid
-                        }, function(resp){
-                            if (resp && resp.to) {
-                                H.ajaxPost("/create", {
-                                    id: elm.dataset.fbid,
-                                    word: event.target.innerText
-                                });
-                            }
-                        });
+                    FB.ui({method: 'apprequests',
+                        message: 'Hey! Play with me!',
+                        to: elm.dataset.fbid
+                    }, function(resp){
+                        if (resp && resp.to) {
+                            H.ajaxPost("/create", {
+                                id: elm.dataset.fbid,
+                                word: event.target.innerText
+                            });
+                        }
                     });
                 }
             });
