@@ -118,3 +118,12 @@ a {
     width: 70px;
     friends: 70px;
 }
+
+#bar h1 {
+    padding: 0;
+    margin: 0 100px;
+    text-align: center;
+    font-size: 44px;
+    color: #FFF;
+    line-height: 92px;
+}
