@@ -23,6 +23,7 @@
                     }
 
                     user.setFacebookToken(token);
+                    user.setName(user.name);
                     user.save();
                 });
 
@@ -65,6 +66,12 @@
     app.get("/", routes.index);
     app.get("/auth", routes.auth);
     app.get("/start", routes.start);
+    app.get("/games", routes.games);
+    app.get("/game", routes.game);
+    app.get("/move", routes.move);
+    app.get("/create", routes.create);
+    app.get("/reply", routes.reply);
+    app.get("/og_player", routes.og_player);
 
 
     var server = http.createServer(app);

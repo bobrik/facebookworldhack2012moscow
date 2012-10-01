@@ -21,6 +21,7 @@
                 }
 
                 user.setFacebookToken(req.query.token);
+                user.setName(profile.name);
                 user.save(function() {
                     req.session.fb_token = req.query.token;
                     req.session.fb_id    = profile.id;
