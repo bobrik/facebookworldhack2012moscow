@@ -81,6 +81,8 @@ a {
     display: inline-block;
     text-align: center;
     background: #f3f1e5;
-    width:100%;
+    width:90%;
     padding: 20px 0;
+    border: 1px dotted #AFB225;
+    border-radius: 10px;
 }
