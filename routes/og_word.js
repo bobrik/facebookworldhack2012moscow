@@ -12,7 +12,7 @@
             title : 'Hangman: ' + req.query.word,
             pageName: "og_word",
             name  : req.query.word,
-            image : "http://graph.facebook.com/" + 1216301866 + "/picture?type=large",
+            image : "http://cs302709.userapi.com/v302709982/81a9/V4STjJ8buiI.jpg",
             url   : "http://web372.verumnets.ru/og_word?word=" + req.query.word
         });
     };
