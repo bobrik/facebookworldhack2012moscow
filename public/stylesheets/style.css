@@ -111,10 +111,21 @@ a {
 
 .itemList li:last {
     border-bottom-width: 1px;
+    color:#fd6e44;
 }
 
 .itemList li img {
-    border-radius: 70px;
-    width: 70px;
-    friends: 70px;
+    border-radius: 80px;
+    width: 80px;
+    friends: 80px;
+    float: left;
+}
+
+.ietmList .description {
+    float: left;
+}
+
+.itemList .text {
+    font-size: 14px;
+    color: #696969;
 }
