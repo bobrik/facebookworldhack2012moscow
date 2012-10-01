@@ -3,6 +3,12 @@
         Game       = require("../lib/Game");
 
     module.exports = authorized(function(req, res, next, user) {
+        res.render('field', {
+            pageName : "field",
+            title    : 'Game',
+            game  : {test: 1}
+        });
+        /*
         var game = new Game(req.query.id, undefined, user.getStorage());
         game.load(function(error) {
             if (error) {
@@ -21,6 +27,6 @@
                     data  : data
                 });
             });
-        })
+        }) */
     });
 })(module);

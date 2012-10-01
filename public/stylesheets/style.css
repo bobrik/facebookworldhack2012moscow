@@ -107,6 +107,9 @@ a {
     border: 1px dotted #AFB225;
     padding: 5px;
     border-bottom-width: 0px;
+    clear: both;
+    height:82px;
+    color:#fd6e44;
 }
 
 .itemList li:last {
@@ -114,7 +117,38 @@ a {
 }
 
 .itemList li img {
-    border-radius: 70px;
-    width: 70px;
-    friends: 70px;
+    border-radius: 80px;
+    width: 80px;
+    friends: 80px;
+    float: left;
+}
+
+.itemList .description {
+    float: left;
+    padding-left: 20px;
+}
+
+.itemList .description .name {
+    color:#fd6e44;
+}
+
+.itemList .text {
+    font-size: 14px;
+    color: #696969;
+}
+
+.itemList .arrow {
+    float: right;
+    margin-top: 22px;
+    margin-right: 5px;
+    width: 24px;
+}
+
+#bar h1 {
+    padding: 0;
+    margin: 0 100px;
+    text-align: center;
+    font-size: 44px;
+    color: #FFF;
+    line-height: 92px;
 }

@@ -1,10 +1,24 @@
-li
-    if item.name
-        div.name=item.name
-    else
-        div.name=item.first_name
+li.item
+    a(href="javascript:;", data-installed=item.installed)
 
-    if item.photo
-         img(src=item.photo)
-    else
-        img(src=item.picture.data.url)
+        if (!item.opponent)
+            img.arrow(src="/images/list of friends/RedArrow.png")
+
+        if item.photo
+             img(src=item.photo)
+        else
+            img(src=item.picture.data.url)
+
+        div.description
+            if item.name
+                div.name=item.name
+            else
+                div.name=item.first_name
+
+            if (!item.opponent)
+                if (item.installed)
+                    div.text Start game
+                else
+                    div.text Invite to game
+            else
+                div.text Your move
