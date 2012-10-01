@@ -7,7 +7,7 @@
             return next(new Error("No game id or letter specified!"));
         }
 
-        var game = new Game(req.body.id, undefined, user.getStorage());
+        var game = new Game(req.body.game_id, undefined, user.getStorage());
         game.load(function(error) {
             if (error) {
                 return next(error);
@@ -30,8 +30,9 @@
 
                     game.exportFor(user, function(error, data) {
                         res.json({
-                            good : good,
-                            game : data
+                            good     : good,
+                            game     : data,
+                            finished : game.isFinished()
                         });
 
                         // make some stuff
