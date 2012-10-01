@@ -21,11 +21,11 @@ var H = {
             var block = this.getEl();
             var title = block.querySelectorAll(".title");
             title.innerText = props.title;
-            block.style.display = "block;"
+            block.style.display = "block";
         },
 
         hide: function() {
-            this.getEl().style.display = "none;"
+            this.getEl().style.display = "none";
         },
 
         getEl: function(){
