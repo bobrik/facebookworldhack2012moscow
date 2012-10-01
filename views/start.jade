@@ -3,6 +3,9 @@ extends layout
 append head
     link(rel='stylesheet', href='/stylesheets/start.css')
 
+append page
+    script(src='/js/startPage.js')
+
 block content
     div#gameCreation
-        a#startGame Start game
+        a#startGame(href="javascript:;") Start game

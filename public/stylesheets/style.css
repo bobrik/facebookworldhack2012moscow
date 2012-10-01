@@ -1,12 +1,13 @@
 body {
-    font: 14px "Trebuchet MS";
+    font: 40px "Trebuchet MS";
     background: url("/images/Background@2x.png") repeat-x;
     margin: 0;
     padding: 0;
 }
 
 a {
-  color: #AFB225;
+   color: #AFB225;
+   text-decoration: none;
 }
 
 #bar {
@@ -30,4 +31,19 @@ a {
 #bar #settingsButton {
     float: right;
     background: url("/images/list of friends/SettingsButtonNormal@2x.png") no-repeat;
+}
+
+#popup {
+    display: none;
+    position: absolute;
+    top:100px;
+    width: 90%;
+    min-height: 300px;
+}
+
+#popup .title {
+    height:92px;
+    font-size: 40px;
+    padding: 10px;
+    text-align: center;
 }

@@ -1,12 +1,20 @@
 doctype 5
 html
-  block head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src='/js/hang.js')
-    script(type="text/javascript")
-        H.init("#{pageName}");
+  head
+      block head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(src='/js/hang.js')
+        block page
+        script(type="text/javascript")
+            document.addEventListener("DOMContentLoaded", function(){
+                document.removeEventListener( "DOMContentLoaded", arguments.callee, false);
+                H.init("#{pageName}");
+            });
   body
     div#bar
         include buttons
     block content
+    div#popup
+        div.title
+        div.content
