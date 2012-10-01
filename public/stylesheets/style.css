@@ -24,7 +24,7 @@ a {
     float: left;
 }
 
-#bar #settingsButtons {
+#bar #settingsButton {
     float: right;
     background: url("/images/list of friends/InfoButtonPressed@2x.png") no-repeat;
 }
