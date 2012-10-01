@@ -15,6 +15,7 @@ H.pages.startPage = function() {
             } else {
                 var words = H.getWords();
                 var elm = H.closest("li", event.target);
+                var cnt = "";
 
                 for (var i in words) {
                     cnt +=  "<a class='button word' href='javascript:;'>" + words[i] + "</a>";
