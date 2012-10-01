@@ -3,8 +3,6 @@ H.pages.friendsPage = function() {
     H.initFbAPI();
     list.addEventListener("click", function(event){
 
-        list.removeEventListener("click");
-
         var cnt = "";
         var words = H.getWords();
         var elm = H.closest("li", event.target);
