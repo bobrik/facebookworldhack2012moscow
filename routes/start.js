@@ -8,7 +8,7 @@
             }
 
             res.render('start', {
-                pageName : "start",
+                pageName : "startPage",
                 title    : 'Create new game',
                 friends  : friends
             });
