@@ -31,6 +31,8 @@ var H = {
             var documentWidth = window.innerWidth / 2 + window.pageXOffset - (block.offsetWidth / 2);
             var documentHeight = window.innerHeight / 2 + window.pageYOffset - (block.offsetHeight / 2);
 
+            overlay.style.height = window.innerHeight + "px";
+
             block.style.left = documentWidth + "px";
             block.style.top = documentHeight + 50 + "px";
 
@@ -146,9 +148,7 @@ var H = {
                 cookie     : true, // enable cookies to allow the server to access the session
                 frictionlessRequests:true
             });
-
             if (cb) cb();
-
         };
 
         // Load the SDK Asynchronously
