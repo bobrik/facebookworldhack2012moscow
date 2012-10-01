@@ -126,5 +126,38 @@ var H = {
                 encodeURIComponent(k) + "=" + encodeURIComponent(v));
         }
         return str.join("&");
+    },
+
+    words: ["Variables","Persistance","LuaLearners","Method","Function","Arguments","Script","Condition","Return","Break","if","do","for","until","end","error","GUI","Position","Instance","Size","TweenSize","Remove","Destroy","Instance","Debris","Backpack","Workspace","ScreenGui","Players","Character","Teams","Debris","GetService","String","Integer","Connect","Button1Down","Button2Down","Touched","MouseClick"],
+
+    shuffle: function (arr) {
+        return arr.sort(function() {return 0.5 - Math.random()});
+    },
+
+    getWords: function(){
+        return this.shuffle(this.words).slice(0,3);
+    },
+
+
+    initFbAPI: function(cb){
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '226112007518642', // App ID
+                cookie     : true, // enable cookies to allow the server to access the session
+                frictionlessRequests:true
+            });
+
+            if (cb) cb();
+
+        };
+
+        // Load the SDK Asynchronously
+        (function(d){
+            var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement('script'); js.id = id; js.async = true;
+            js.src = "//connect.facebook.net/en_US/all.js";
+            ref.parentNode.insertBefore(js, ref);
+        }(document));
     }
 }
