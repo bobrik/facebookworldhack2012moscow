@@ -10,6 +10,14 @@
                 }
 
                 console.log("User data", user.getData());
+                user.getAppFriends(function(error, friends) {
+                    if (error) {
+                        console.log(error);
+                        return;
+                    }
+
+                    console.log("APP FRIENDS", friends);
+                })
             });
         }
 
