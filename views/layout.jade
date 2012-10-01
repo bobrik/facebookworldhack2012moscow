@@ -7,7 +7,10 @@ html
         script(src='/js/hang.js')
         block page
         script(type="text/javascript")
-            H.init("#{pageName}");
+            document.addEventListener("DOMContentLoaded", function(){
+                document.removeEventListener( "DOMContentLoaded", arguments.callee, false);
+                H.init("#{pageName}");
+            });
   body
     div#bar
         include buttons
