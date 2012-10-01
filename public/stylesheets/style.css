@@ -1,8 +1,12 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Trebuchet MS";
 }
 
 a {
-  color: #00B7FF;
+  color: #AFB225;
+}
+
+#bar {
+    height:92px;
+    background: url("/images/NavBarBackground@2x.png") repeat-x;
 }
