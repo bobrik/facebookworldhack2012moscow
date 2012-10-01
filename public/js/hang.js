@@ -26,6 +26,10 @@ var H = {
             content.innerHTML = props.content;
 
             block.style.display = "block";
+
+            overlay.style.height = window.innerHeight + "px";
+            overlay.height = window.innerHeight + "px";
+
             overlay.style.display = "block";
 
             var documentWidth = window.innerWidth / 2 + window.pageXOffset - (block.offsetWidth / 2);
@@ -139,7 +143,6 @@ var H = {
     getWords: function(){
         return this.shuffle(this.words).slice(0,3);
     },
-
 
     initFbAPI: function(cb){
         window.fbAsyncInit = function() {

@@ -40,7 +40,7 @@ H.pages.friendsPage = function() {
                                 word: event.target.innerText
                             }, function(game){
                                 if (game) {}
-                                  //  location.href = "/field/" + game.id;
+                                  //  location.href = "/field/?id=" + game.id;
                             });
                         }
                     });
