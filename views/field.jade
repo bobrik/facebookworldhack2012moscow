@@ -7,10 +7,11 @@ append page
     script(src='/js/fieldPage.js')
 
 block content
-    if (game.move)
-        h3 Your turn
-    else
-        h3 Waitnig for opponent
+    center
+        if (game.move)
+            h7 Your turn
+        else
+            h7 Waitnig for opponent
 
     div#field("data-gameid"=game.game_id)
         div.field-item

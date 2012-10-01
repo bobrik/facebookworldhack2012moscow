@@ -9,7 +9,7 @@ H.pages.fieldPage = function() {
                 letter: event.target.innerHTML,
                 game_id: gameId
             }, function(response){
-                if (!response.fineshed) {
+                if (response.fineshed) {
                     if (response.game.i_won || response.game.i_hang_up) {
                         H.popup.show({
                             title: "You win!",
