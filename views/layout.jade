@@ -2,7 +2,7 @@ doctype 5
 html
   head
       block head
-        title= title
+        title=title
         link(rel='stylesheet', href='/stylesheets/style.css')
         script(src='/js/hang.js')
         block page
@@ -14,6 +14,7 @@ html
   body
     div#bar
         include buttons
+        h1 #{title}
     block content
     div#overlay
     div#popup
