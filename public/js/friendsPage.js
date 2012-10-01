@@ -21,7 +21,7 @@ H.pages.friendsPage = function() {
         for (var j in elms) {
             elms[j].addEventListener("click", function(event){
                 H.popup.hide();
-                if (elm && elm.dataset.installed) {
+                if (elm && elm.dataset.installed == 1) {
                     H.ajaxPost("/create", {
                         id: elm.dataset.fbid,
                         word: event.target.innerTextf
