@@ -30,8 +30,9 @@
 
                     game.exportFor(user, function(error, data) {
                         res.json({
-                            good : good,
-                            game : data
+                            good     : good,
+                            game     : data,
+                            finished : game.isFinished()
                         });
 
                         // make some stuff
