@@ -64,7 +64,7 @@ a {
     margin-top: 30px;
 }
 
-#popup .content .button:last {
+#popup .content .button:last-child {
     margin-bottom: 20px;
 }
 
@@ -113,7 +113,7 @@ a {
     cursor: pointer;
 }
 
-.itemList li:last {
+.itemList li:last-child {
     border-bottom-width: 1px;
 }
 
