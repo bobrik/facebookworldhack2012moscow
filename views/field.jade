@@ -42,7 +42,7 @@ block content
         div.keyboard
             - for (var i in keyboard)
                 - if (game.guessed.toString().indexOf(keyboard[i]) != -1)
-                    span.letter
+                    span
                         s #{keyboard[i]}
                 else
                     span.letter #{keyboard[i]}

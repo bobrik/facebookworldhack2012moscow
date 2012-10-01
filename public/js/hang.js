@@ -3,6 +3,8 @@ var H = {
         if (H.pages[pageName]) {
             this.page = new H.pages[pageName]();
         }
+
+        H.initFbAPI();
     },
 
     ge: function(id) {
@@ -171,7 +173,7 @@ var H = {
         FB.api("/me/hangergame:hang", {player:"http://web372.verumnets.ru/og_player?user_id=" + id});
     },
 
-    ofguess: function(word){
-        FB.api("/me/hangergame:quess", {word: "http://web372.verumnets.ru/og_word?word=" + word})
+    ogguess: function(word){
+        FB.api("/me/hangergame:guess", {word: "http://web372.verumnets.ru/og_word?word=" + word})
     }
 }

@@ -16,7 +16,7 @@ H.pages.fieldPage = function() {
                             content: ""
                         });
                         response.game.i_hang_u && H.oghang(response.game.partner);
-                        H.og_word(response.game.word);
+                        H.ogguess(response.game.word);
                     } else {
                         H.popup.show({
                             title: "You loose!",
@@ -26,7 +26,7 @@ H.pages.fieldPage = function() {
 
 
                 } else {
-                    location.href = location.href;
+                  //  location.href = location.href;
                 }
             });
         });
