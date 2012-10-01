@@ -5,9 +5,8 @@
 
 #startGame {
     display: inline-block;
-    width:90%;
-    padding-top: 20px;
-    height:70px;
+    width:100%;
+    padding: 20px;
     color: #AFB225;
     border: 1px dotted #AFB225;
     border-radius: 10px;
