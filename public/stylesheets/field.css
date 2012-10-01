@@ -75,7 +75,7 @@
 }
 
 .keyboard {
-    width: 400px;
+    width: 100%;
     margin: 20px auto;
     text-align: center;
     color: #66706e;
@@ -84,7 +84,7 @@
 .keyboard .letter {
     vertical-align: top;
     display: inline-block;
-    min-width: 30px;
+    min-width: 10px;
     margin: 5px;
     cursor: pointer;
 }
