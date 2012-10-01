@@ -1,5 +1,6 @@
 var H = {
     init: function(pageName) {
+        alert(pageName)
         if (H.pages[pageName]) {
             this.page = new H.pages[pageName]();
         }
