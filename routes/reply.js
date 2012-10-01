@@ -4,7 +4,7 @@
         Game       = require("../lib/Game");
 
     module.exports = authorized(function(req, res, next, user) {
-        if (!req.body.game_id || !req.body.word || !req.body.letter) {
+        if (!req.body.game_id || !req.body.word) {
             return next(new Error("No required params specified!"));
         }
 
@@ -14,7 +14,7 @@
                 return next(error);
             }
 
-            user.acceptGame(req.body.game_id, req.body.word, req.body.letter, function(error, game) {
+            user.acceptGame(req.body.game_id, req.body.word, function(error, game) {
                 if (error) {
                     return next(error);
                 }
