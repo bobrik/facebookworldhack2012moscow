@@ -7,7 +7,7 @@ append page
     script(src='/js/fieldPage.js')
 
 block content
-    div#field
+    div#field("data-gameid"=game.game_id)
         div.field-item
             div.name #{game.started.name}
             div(class=["hangman-canvas", "turn-" + game.firstMistakes])
@@ -32,4 +32,10 @@ block content
                         span.letter #{game.opponentWord[i]}
                     - else
                         span.letter &nbsp;
+
+        div.keyboard
+            - for (var i in keyboard)
+                span.letter #{keyboard[i]}
+
+
 
