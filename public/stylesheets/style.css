@@ -64,8 +64,12 @@ a {
     margin-top: 30px;
 }
 
+#popup .content .button:last {
+    margin-bottom: 20px;
+}
+
 #popup .title {
-    height:92px;
+    height: 50px;
     font-size: 40px;
     padding: 10px;
     text-align: center;
