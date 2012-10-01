@@ -7,7 +7,7 @@
             return next(new Error("No game specified!"));
         }
 
-        var game = new Game(req.body.id, undefined, user.getStorage());
+        var game = new Game(req.body.game_id, undefined, user.getStorage());
         game.load(function(error) {
             if (error) {
                 return next(error);
