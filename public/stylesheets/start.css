@@ -6,7 +6,7 @@
 #startGame {
     display: inline-block;
     width:100%;
-    padding: 20px;
+    padding: 20px 0;
     color: #AFB225;
     border: 1px dotted #AFB225;
     border-radius: 10px;
