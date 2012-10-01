@@ -19,23 +19,20 @@ var H = {
 
         show: function(props) {
             var block = this.getEl();
-            var title = block.querySelectorAll(".title");
-            var content = block.querySelectorAll(".content");
+            var title = block.querySelector(".title");
+            var content = block.querySelector(".content");
             title.innerText = props.title;
             content.innerHTML = props.content;
 
-            var documentWidth = window.innerWidth / 2 + window.pageXOffset - (block.offsetWidth / 2);
-            var documentHeight = window.innerHeight /2 + window.pageYOffset - (block.offsetHeight / 2);
+            block.style.display = "block";
 
-            console.log(documentWidth, documentHeight, block.width, title);
+            var documentWidth = window.innerWidth / 2 + window.pageXOffset - (block.offsetWidth / 2);
+            var documentHeight = window.innerHeight / 2 + window.pageYOffset - (block.offsetHeight / 2);
+
+            console.log(documentWidth, documentHeight, block.offsetWidth, title);
 
             block.style.left = documentWidth + "px";
             block.style.top = documentHeight + "px";
-
-
-            block.style.display = "block";
-
-
 
         },
 
