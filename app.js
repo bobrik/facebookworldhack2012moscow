@@ -84,4 +84,6 @@
     console.log("Express server listening on port " + app.get('port'));
 
     io.listen(server);
+
+    console.log("fb scope", everyauth.facebook.scope());
 })();
