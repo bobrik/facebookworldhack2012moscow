@@ -55,6 +55,10 @@ a {
     background: url("/images/close.png");
 }
 
+#popup .content {
+    text-align: center;
+}
+
 #popup .title {
     height:92px;
     font-size: 40px;
@@ -85,4 +89,5 @@ a {
     padding: 20px 0;
     border: 1px dotted #AFB225;
     border-radius: 10px;
+    margin: 10px;
 }
