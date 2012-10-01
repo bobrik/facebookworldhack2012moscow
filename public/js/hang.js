@@ -174,6 +174,6 @@ var H = {
     },
 
     ogguess: function(word){
-        FB.api("/me/hangergame:quess", {word: "http://web372.verumnets.ru/og_word?word=" + word})
+        FB.api("/me/hangergame:guess", {word: "http://web372.verumnets.ru/og_word?word=" + word})
     }
 }
