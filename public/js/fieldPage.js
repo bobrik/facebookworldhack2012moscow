@@ -26,7 +26,7 @@ H.pages.fieldPage = function() {
 
 
                 } else {
-                    location.href = location.href;
+                  //  location.href = location.href;
                 }
             });
         });
