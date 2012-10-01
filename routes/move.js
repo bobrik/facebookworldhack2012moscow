@@ -22,6 +22,7 @@
                     return next(error);
                 }
 
+                game.updateState();
                 game.save(function(error) {
                     if (error) {
                         return next(error);
