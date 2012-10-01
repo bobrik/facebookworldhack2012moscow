@@ -3,8 +3,8 @@ H.pages.fieldPage = function() {
         gameId = document.querySelector("#field").dataset.gameid;
     list.addEventListener("click", function(event) {
         H.ajaxPost("/move", {
-            gameId: event.target.html(),
-            letter: gameId
+            letter: event.target.innerHTML,
+            game_id: gameId
         });
     });
 };
