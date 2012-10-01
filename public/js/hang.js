@@ -52,5 +52,19 @@ var H = {
             }
             return this.el;
         }
+    },
+
+
+    closest: function(nodeName, elm) {
+
+        if (elm.nodeName.toLocaleLowerCase() != nodeName.toLowerCase()) {
+            if (elm.parentNode) {
+                 return H.closest(elm.parentNode);
+            }
+            return null;
+        } else {
+            return elm;
+        }
+
     }
 }
