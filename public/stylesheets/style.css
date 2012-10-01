@@ -108,11 +108,12 @@ a {
     padding: 5px;
     border-bottom-width: 0px;
     clear: both;
+    height:82px;
+    color:#fd6e44;
 }
 
 .itemList li:last {
     border-bottom-width: 1px;
-    color:#fd6e44;
 }
 
 .itemList li img {
@@ -122,7 +123,7 @@ a {
     float: left;
 }
 
-.ietmList .description {
+.itemList .description {
     float: left;
     padding-left: 7px;
 }
