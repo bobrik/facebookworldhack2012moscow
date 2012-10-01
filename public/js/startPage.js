@@ -29,7 +29,7 @@ H.pages.startPage = function() {
                 var elms = document.querySelectorAll(".word");
 
                 for (var j in elms) {
-                    elms[j].addEventListener("click", function(event){
+                   elms[j].addEventListener && elms[j].addEventListener("click", function(event){
                         H.popup.hide();
 
                         H.ajaxPost("/reply", {
