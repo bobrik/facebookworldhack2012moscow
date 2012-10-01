@@ -7,6 +7,11 @@ append page
     script(src='/js/fieldPage.js')
 
 block content
+    if (game.move)
+        h3 Your turn
+    else
+        h3 Waitnig for opponent
+
     div#field("data-gameid"=game.game_id)
         div.field-item
             div.name #{game.started.name}
@@ -35,7 +40,11 @@ block content
 
         div.keyboard
             - for (var i in keyboard)
-                span.letter #{keyboard[i]}
+                - if (game.guessed.toString().indexOf(keyboard[i]) != -1)
+                    span.letter
+                        s #{keyboard[i]}
+                else
+                    span.letter #{keyboard[i]}
 
 
 
