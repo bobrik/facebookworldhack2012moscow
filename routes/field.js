@@ -1,9 +1,9 @@
 (function(module) {
     var authorized = require("./authorized"),
-        Game       = require("./Game");
+        Game       = require("../Game");
 
     module.exports = authorized(function(req, res, next, user) {
-        var game = new Game(req.query.id, undefined, storage);
+        var game = new Game(req.query.id, undefined, user.getStorage());
         game.load(function(error) {
             if (error) {
                 console.log(error);
