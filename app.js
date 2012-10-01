@@ -22,7 +22,7 @@
                         return;
                     }
 
-                    console.log(user);
+                    console.log(user, extra);
 
                     user.setFacebookToken(token);
                     user.setName(user.name);
