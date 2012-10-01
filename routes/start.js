@@ -37,6 +37,15 @@
                     }
 
                     result[id] = data;
+                    if (data.opponent.id == user.getId()) {
+                        data.id = data.started.id;
+                        data.name = data.started.name;
+                        data.photo = data.started.photo;
+                    } else {
+                        data.id = data.opponent.id;
+                        data.name = data.opponent.name;
+                        data.photo = data.opponent.photo;
+                    }
                     process.nextTick(exportGame);
                 });
             })();
