@@ -1,8 +1,17 @@
 (function(module) {
-    module.exports = function(req, res) {
-        res.render('start', {
-            pageName: "start",
-            title  : 'Create new game'
+    var authorized = require("./authorized");
+
+    module.exports = authorized(function(req, res, next, user) {
+        user.getFriends(function(error, friends) {
+            if (error) {
+                return next(error);
+            }
+
+            res.render('start', {
+                pageName : "start",
+                title    : 'Create new game',
+                friends  : friends
+            });
         });
-    };
+    });
 })(module);
