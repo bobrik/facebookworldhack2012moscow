@@ -35,7 +35,7 @@ var H = {
             var documentWidth = window.innerWidth / 2 + window.pageXOffset - (block.offsetWidth / 2);
             var documentHeight = window.innerHeight / 2 + window.pageYOffset - (block.offsetHeight / 2);
 
-            overlay.style.height = window.document.offsetHeight + "px";
+            overlay.style.height = document.bodyoffsetHeight + "px";
 
             block.style.left = documentWidth + "px";
             block.style.top = documentHeight + 50 + "px";
