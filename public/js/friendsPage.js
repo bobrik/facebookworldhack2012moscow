@@ -39,7 +39,8 @@ H.pages.friendsPage = function() {
                                 id: elm.dataset.fbid,
                                 word: event.target.innerText
                             }, function(game){
-                                location.href =
+                                if (game)
+                                    location.href = "/field/" + game.id;
                             });
                         }
                     });
