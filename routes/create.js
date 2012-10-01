@@ -17,10 +17,15 @@
                     return next(error);
                 }
 
+                console.log("eeee")
+
                 game.exportFor(user, function(error, data) {
+                    console.log("bbbbbbb")
                     if (error) {
                         return next(error);
                     }
+
+                    console.log("tttt")
 
                     res.json({
                         game: data
