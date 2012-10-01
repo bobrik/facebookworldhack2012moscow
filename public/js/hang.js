@@ -24,14 +24,18 @@ var H = {
             title.innerText = props.title;
             content.innerHTML = props.content;
 
-
-            block.style.display = "block";
-
             var documentWidth = window.innerWidth / 2 + window.pageXOffset - (block.width / 2);
             var documentHeight = window.innerHeight /2 + window.pageYOffset - (block.height / 2);
 
-            block.left = documentWidth + "px";
-            block.top = documentHeight + "px";
+            console.log(documentWidth, documentHeight, block.width, title);
+
+            block.style.left = documentWidth + "px";
+            block.style.top = documentHeight + "px";
+
+
+            block.style.display = "block";
+
+
 
         },
 
