@@ -10,6 +10,20 @@ H.pages.fieldPage = function() {
                 game_id: gameId
             }, function(response){
                 if (!response.fineshed) {
+                    if (response.game.i_won || response.game.i_hang_up) {
+                        H.popup.show({
+                            title: "You win!",
+                            content: ""
+                        });
+                        response.game.i_hang_u && H.oghang(response.game.partner);
+                        H.og_word(response.game.word);
+                    } else {
+                        H.popup.show({
+                            title: "You loose!",
+                            content: ""
+                        });
+                    }
+
 
                 } else {
                     location.href = location.href;
