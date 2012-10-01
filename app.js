@@ -74,6 +74,7 @@
     app.get("/reply", routes.reply);
     app.get("/field", routes.field);
     app.get("/og_player", routes.og_player);
+    app.get("/og_word", routes.og_word);
 
 
     var server = http.createServer(app);
