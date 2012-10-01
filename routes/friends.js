@@ -18,7 +18,7 @@
             });
 
             res.render('friends', {
-                pageName : "friends",
+                pageName : "friendsPage",
                 title    : 'Choose friend for a game',
                 friends  : friends
             });

@@ -1,25 +1,51 @@
 (function(module) {
-    var authorized = require("./authorized");
+    var authorized = require("./authorized"),
+        User       = require("../lib/User");
 
-    module.exports = function(req, res, next, user) {
-        if (!req.query.id || !req.query.word) {
+    module.exports = authorized(function(req, res, next, user) {
+        if (!req.body.word) {
             return next(new Error("No required params!"));
         }
 
-        user.createGame(req.query.id, req.query.word, function(error, game) {
-            if (error) {
-                return next(error);
-            }
+        console.log(req.body);
+        console.log("OOOooooo")
 
-            game.exportFor(user, function(error, data) {
+        function creator(id) {
+            console.log('aaaaa')
+            user.createGame(id, req.body.word, function(error, game) {
                 if (error) {
                     return next(error);
                 }
 
-                res.json({
-                    game: data
+                console.log("eeee")
+
+                game.exportFor(user, function(error, data) {
+                    console.log("bbbbbbb")
+                    console.log(error);
+                    if (error) {
+                        return next(error);
+                    }
+
+                    console.log("tttt")
+
+
+                    res.json({
+                        game: data
+                    });
                 });
             });
-        });
-    };
+        }
+
+        if (!req.body.id) {
+            User.getRandom(function(error, opponent) {
+                if (error) {
+                    return next(error);
+                }
+
+                creator(opponent.getId());
+            });
+        } else {
+            creator(req.body.id);
+        }
+    });
 })(module);

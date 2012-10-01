@@ -3,11 +3,11 @@
         Game       = require("../lib/Game");
 
     module.exports = authorized(function(req, res, next, user) {
-        if (!req.query.game_id || !req.query.letter) {
+        if (!req.body.game_id || !req.body.letter) {
             return next(new Error("No game id or letter specified!"));
         }
 
-        var game = new Game(req.query.id, undefined, user.getStorage());
+        var game = new Game(req.body.id, undefined, user.getStorage());
         game.load(function(error) {
             if (error) {
                 return next(error);
@@ -22,6 +22,7 @@
                     return next(error);
                 }
 
+                game.updateState();
                 game.save(function(error) {
                     if (error) {
                         return next(error);
@@ -42,9 +43,9 @@
             }
 
             if (game.get("started") == user.getId()) {
-                game.guessFromStarter(req.query.letter, afterMove);
+                game.guessFromStarter(req.body.letter, afterMove);
             } else if (game.get("opponent") == user.getId()) {
-                game.guessFromOpponent(req.query.letter, afterMove);
+                game.guessFromOpponent(req.body.letter, afterMove);
             }
         });
     });

@@ -1,20 +1,22 @@
-li
-    a(href="javascript:;", data-installed=item.installed)
-        if item.photo
-             img(src=item.photo)
+li.item(data-installed=item.installed*1, data-fbid=item.id)
+    if (!item.opponent)
+        img.arrow(src="/images/list of friends/RedArrow.png")
+
+    if item.photo
+         img(src=item.photo)
+    else
+        img(src=item.picture.data.url)
+
+    div.description
+        if item.name
+            div.name=item.name
         else
-            img(src=item.picture.data.url)
+            div.name=item.first_name
 
-        div.description
-            if item.name
-                div.name=item.name
+        if (!item.opponent)
+            if (item.installed)
+                div.text Start game
             else
-                div.name=item.first_name
-
-            if (!item.opponent)
-                if (item.installed)
-                    div.text Start game
-                else
-                    div.text Invite to game
-            else
-                div.text Your move
+                div.text Invite to game
+        else
+            div.text Your move

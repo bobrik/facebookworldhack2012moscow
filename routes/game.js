@@ -3,7 +3,7 @@
         Game       = require("../lib/Game");
 
     module.exports = authorized(function(req, res, next, user) {
-        if (!req.query.game_id) {
+        if (!req.body.game_id) {
             return next(new Error("No game specified!"));
         }
 

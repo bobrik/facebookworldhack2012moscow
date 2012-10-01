@@ -4,17 +4,17 @@
         Game       = require("../lib/Game");
 
     module.exports = authorized(function(req, res, next, user) {
-        if (!req.query.game_id || !req.query.word || !req.query.letter) {
+        if (!req.body.game_id || !req.body.word || !req.body.letter) {
             return next(new Error("No required params specified!"));
         }
 
-        var game = new Game(req.query.game_id, undefined, user.getStorage());
+        var game = new Game(req.body.game_id, undefined, user.getStorage());
         game.load(function(error) {
             if (error) {
                 return next(error);
             }
 
-            user.acceptGame(req.query.game_id, req.query.word, req.query.letter, function(error, game) {
+            user.acceptGame(req.body.game_id, req.body.word, req.body.letter, function(error, game) {
                 if (error) {
                     return next(error);
                 }
