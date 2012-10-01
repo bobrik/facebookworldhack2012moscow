@@ -165,5 +165,13 @@ var H = {
             js.src = "//connect.facebook.net/en_US/all.js";
             ref.parentNode.insertBefore(js, ref);
         }(document));
+    },
+
+    oghang: function(id){
+        FB.api("/me/hangergame:hang", {player:"http://web372.verumnets.ru/og_player?user_id=" + id});
+    },
+
+    ofguess: function(word){
+        FB.api("/me/hangergame:quess", {word: "http://web372.verumnets.ru/og_word?word=" + word})
     }
 }
