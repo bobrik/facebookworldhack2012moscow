@@ -6,12 +6,45 @@ H.pages.startPage = function() {
     });
 
     var list = document.querySelector("ul.itemList");
-    H.initFbAPI();
     list.addEventListener("click", function(event){
         list.removeEventListener("click");
         var elm = H.closest("li", event.target);
-        if (elm.dataset.game_id) {
-            location = "/field/?id=" + elm.dataset.game_id;
+        if (elm.dataset.incoming == 1) {
+            if (elm.dataset.opponent_word) {
+                location = "/field/?id=" + elm.dataset.game_id;
+            } else {
+                var words = H.getWords();
+                var elm = H.closest("li", event.target);
+
+                for (var i in words) {
+                    cnt +=  "<a class='button word' href='javascript:;'>" + words[i] + "</a>";
+                }
+
+                H.popup.show({
+                    title: "Choose the word",
+                    content: cnt
+                });
+
+                var elms = document.querySelectorAll(".word");
+
+                for (var j in elms) {
+                    elms[j].addEventListener("click", function(event){
+                        H.popup.hide();
+
+                        H.ajaxPost("/reply", {
+                            game_id: elm.dataset.game_id,
+                            word: event.target.innerHTML
+                        }, function(resp){
+                            if (resp.game)
+                                location.href = "/field/?id=" + elm.dataset.game_id;
+                        });
+                    });
+                }
+            }
+        } else {
+            if (elm.dataset.opponent_word) {
+                location = "/field/?id=" + elm.dataset.game_id;
+            }
         }
     });
 }
