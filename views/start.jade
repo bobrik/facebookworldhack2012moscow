@@ -11,4 +11,5 @@ block content
         a#startGame(href="javascript:;") Start game
         ul.itemList
             each item in games
+                #{JSON.stringify(item)}
                 include user-item
