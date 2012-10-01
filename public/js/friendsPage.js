@@ -3,7 +3,12 @@ H.pages.friendsPage = function() {
     console.log(list)
     list.addEventListener("click", function(event){
         var elm = H.closest("li", event.target);
-        console.log(elm);
-
+        console.log(elm, event.target)
+        if (elm && elm.dataset.installed) {
+            H.ajaxPost("/create", {
+                id: elm.dataset.fbid,
+                word: "test"
+            })
+        }
     });
 }
