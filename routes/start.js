@@ -32,6 +32,7 @@
                 games[id].exportFor(user, function(error, data) {
                     if (error) {
                         console.log(error);
+                        throw error;
                         exportGame();
                         return;
                     }
