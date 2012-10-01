@@ -11,5 +11,6 @@ block content
         ul
             for friend in friends
                 li
-                    #{JSON.stringify(friend)}
+                    div.name=friend.name
+                    img(src=friend.picture.data.url)
 
