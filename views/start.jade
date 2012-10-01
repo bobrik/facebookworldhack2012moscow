@@ -8,7 +8,8 @@ append page
 
 block content
     div#gameCreation
-        a#startGame(href="javascript:;") Start game
+        a#startGame(href="/friends") Start game
         ul.itemList
             each item in games
+                #{JSON.stringify(item)}
                 include user-item
