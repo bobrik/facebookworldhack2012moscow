@@ -101,6 +101,10 @@ a {
     margin: 10px;
 }
 
+.itemList {
+    padding: 0px;
+}
+
 .itemList li {
     list-style: none;
     background: #eef1e9;
@@ -111,6 +115,8 @@ a {
     height:82px;
     color:#fd6e44;
     cursor: pointer;
+    list-style-position: outside;
+    margin: 0;
 }
 
 .itemList li:last-child {

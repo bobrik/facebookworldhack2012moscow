@@ -11,11 +11,11 @@
         .facebook
             .appId('226112007518642')
             .appSecret('76af7f166373601ceb7089e16bfbcb10')
-            .findOrCreateUser(function(session, token, extra, user) {
+            .findOrCreateUser(function(session, token, extra, profile) {
                 session.fb_token = token;
-                session.fb_id    = user.id;
+                session.fb_id    = profile.id;
 
-                var user = new User(user.id);
+                var user = new User(profile.id);
                 user.load(function(error) {
                     if (error) {
                         console.log(error);
@@ -23,7 +23,7 @@
                     }
 
                     user.setFacebookToken(token);
-                    user.setName(user.name);
+                    user.setName(profile.name);
                     user.save();
                 });
 

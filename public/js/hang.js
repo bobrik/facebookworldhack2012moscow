@@ -26,12 +26,16 @@ var H = {
             content.innerHTML = props.content;
 
             block.style.display = "block";
+
+            overlay.style.height = window.innerHeight + "px";
+            overlay.height = window.innerHeight + "px";
+
             overlay.style.display = "block";
 
             var documentWidth = window.innerWidth / 2 + window.pageXOffset - (block.offsetWidth / 2);
             var documentHeight = window.innerHeight / 2 + window.pageYOffset - (block.offsetHeight / 2);
 
-            overlay.style.height = window.innerHeight + "px";
+            overlay.style.height = document.body.offsetHeight + "px";
 
             block.style.left = documentWidth + "px";
             block.style.top = documentHeight + 50 + "px";
@@ -139,7 +143,6 @@ var H = {
     getWords: function(){
         return this.shuffle(this.words).slice(0,3);
     },
-
 
     initFbAPI: function(cb){
         window.fbAsyncInit = function() {
