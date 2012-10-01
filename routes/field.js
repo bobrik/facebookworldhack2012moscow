@@ -1,6 +1,6 @@
 (function(module) {
     var authorized = require("./authorized"),
-        Game       = require("../Game");
+        Game       = require("../lib/Game");
 
     module.exports = authorized(function(req, res, next, user) {
         var game = new Game(req.query.id, undefined, user.getStorage());
