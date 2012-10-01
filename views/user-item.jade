@@ -19,7 +19,7 @@ li.item(data-installed=item.installed*1, data-fbid=item.id, data-game_id=item.ga
             else
                 div.text Invite to game
         else
-            if (item.move || item.incoming)
+            if item.move || item.incoming
                 div.text Your move
             else
                 div.text Waiting for opponent
