@@ -8,8 +8,8 @@
 
     everyauth
         .facebook
-            .appId('278419445602379')
-            .appSecret('12f8ecb27bd56b2f76cefeb177980c1b')
+            .appId('226112007518642')
+            .appSecret('76af7f166373601ceb7089e16bfbcb10')
             .findOrCreateUser(function(session, token, extra, user) {
                 session.fb_token = token;
                 session.fb_id    = user.id;
@@ -29,7 +29,7 @@
     var app = express();
 
     app.configure('all', function() {
-        app.set('port', process.env.PORT || 3000);
+        app.set('port', process.env.PORT || 80);
         app.set('views', __dirname + '/views');
         app.set('view engine', 'jade');
         app.use(express.favicon());
