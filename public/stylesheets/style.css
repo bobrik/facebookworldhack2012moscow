@@ -1,5 +1,8 @@
 body {
-  font: 14px "Trebuchet MS";
+    font: 14px "Trebuchet MS";
+    background: url("/images/Background@2x.png") repeat-x;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -9,4 +12,22 @@ a {
 #bar {
     height:92px;
     background: url("/images/NavBarBackground@2x.png") repeat-x;
+}
+
+#bar #settingsButton, #bar #infoButton {
+    width: 64px;
+    height: 62px;
+    background: url("/images/NavBarBackground@2x.png") repeat-x;
+    margin: 15px;
+    display: block;
+}
+
+#bar #infoButton {
+    background: url("/images/list of friends/InfoButtonNormal@2x.png") no-repeat;
+    float: left;
+}
+
+#bar #settingsButton {
+    float: right;
+    background: url("/images/list of friends/SettingsButtonNormal@2x.png") no-repeat;
 }

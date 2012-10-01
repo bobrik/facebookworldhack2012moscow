@@ -1,8 +1,13 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#gameCreation {
+    width: 528px;
+    margin: 40px auto;
 }
 
-a {
-  color: #00B7FF;
+#startGame {
+    display: inline-block;
+    width:490px;
+    padding-left: 30px;
+    height:90px;
+    background: url("/images/list/ButtonStartGameNormal@2x.png") repeat-x;
+    color: #AFB225;
 }
