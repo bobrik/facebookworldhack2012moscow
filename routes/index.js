@@ -10,7 +10,7 @@
                 }
 
                 console.log("User data", user.getData());
-                user.getAppFriends(function(error, friends) {
+                user.getFriends(function(error, friends) {
                     if (error) {
                         console.log(error);
                         return;
