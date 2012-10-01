@@ -10,6 +10,7 @@
 
     module.exports.auth = require("./auth");
     module.exports.start = require("./start");
+    module.exports.field = require("./field");
     module.exports.start = require("./friends");
     module.exports.games = require("./games");
     module.exports.game = require("./game");

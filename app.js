@@ -71,6 +71,7 @@
     app.get("/move", routes.move);
     app.get("/create", routes.create);
     app.get("/reply", routes.reply);
+    app.get("/field", routes.field);
     app.get("/og_player", routes.og_player);
 
 

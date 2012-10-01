@@ -1,0 +1,12 @@
+extends layout
+
+append head
+    link(rel='stylesheet', href='/stylesheets/field.css')
+
+append page
+    script(src='/js/fieldPage.js')
+
+block content
+    div#field
+        JSON.stringify(game)
+
