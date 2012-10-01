@@ -1,5 +1,9 @@
 li
-    div.name=item.name
+    if item.name
+        div.name=item.name
+    else
+        div.name=item.first_name
+
     if item.photo
          img(src=item.photo)
     else
