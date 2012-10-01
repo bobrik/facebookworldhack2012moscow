@@ -1,7 +1,12 @@
 doctype 5
 html
-  head
+  block head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/js/hang.js')
+    script(type="text/javascript")
+        H.init("#{pageName}");
   body
+    div#bar
+        include buttons
     block content

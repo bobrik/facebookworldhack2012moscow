@@ -64,6 +64,8 @@
 
     app.get("/", routes.index);
     app.get("/auth", routes.auth);
+    app.get("/start", routes.start);
+
 
     var server = http.createServer(app);
 
