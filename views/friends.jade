@@ -1,0 +1,15 @@
+extends layout
+
+append head
+    link(rel='stylesheet', href='/stylesheets/friends.css')
+
+append page
+    script(src='/js/friendsPage.js')
+
+block content
+    div#gameCreation
+        ul
+            for friend in friends
+                li
+                    #{JSON.stringify(friend)}
+

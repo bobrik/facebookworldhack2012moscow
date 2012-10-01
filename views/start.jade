@@ -9,4 +9,10 @@ append page
 block content
     div#gameCreation
         a#startGame(href="javascript:;") Start game
-        div #{JSON.stringify(games)}
+        ul
+            each game in games
+                li
+                    if game.move
+                        div#Turn Your turn
+                    else
+                        div#Turn Waiting opponent

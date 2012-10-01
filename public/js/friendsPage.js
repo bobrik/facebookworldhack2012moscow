@@ -1,0 +1,3 @@
+H.pages.friendsPage = function() {
+
+}
