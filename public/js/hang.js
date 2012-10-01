@@ -20,16 +20,16 @@ var H = {
         show: function(props) {
             var block = this.getEl();
             var title = block.querySelector(".title");
+            var overlay = H.ge("overlay");
             var content = block.querySelector(".content");
             title.innerText = props.title;
             content.innerHTML = props.content;
 
             block.style.display = "block";
+            overlay.style.display = "block";
 
             var documentWidth = window.innerWidth / 2 + window.pageXOffset - (block.offsetWidth / 2);
             var documentHeight = window.innerHeight / 2 + window.pageYOffset - (block.offsetHeight / 2);
-
-            console.log(documentWidth, documentHeight, block.offsetWidth, title);
 
             block.style.left = documentWidth + "px";
             block.style.top = documentHeight + 50 + "px";
@@ -38,6 +38,7 @@ var H = {
 
         hide: function() {
             this.getEl().style.display = "none";
+            H.ge("overlay").style.display = "none";
         },
 
         getEl: function(){
