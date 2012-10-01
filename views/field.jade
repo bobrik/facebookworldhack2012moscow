@@ -8,5 +8,28 @@ append page
 
 block content
     div#field
-        #{JSON.stringify(title)}
+        div.field-item
+            div.name #{game.user1.name}
+            div.hangman-canvas.turn-1
+                div.hangman.turn-1
+                div.avatar
+                    img(src=game.user1.avatar)
+            div.word
+                - for (var i in game.user1.word)
+                    - if (game.user1.word[i] != null)
+                        span.letter #{game.user1.word[i]}
+                    - else
+                        span.letter &nbsp;
+        div.field-item
+            div.name #{game.user2.name}
+            div.hangman-canvas.turn-1
+                div.hangman.turn-1
+                div.avatar
+                    img(src=game.user2.avatar)
+            div.word
+                - for (var i in game.user2.word)
+                    - if (game.user2.word[i] != null)
+                        span.letter #{game.user2.word[i]}
+                    - else
+                        span.letter &nbsp;
 

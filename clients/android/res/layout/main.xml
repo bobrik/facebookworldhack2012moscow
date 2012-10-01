@@ -20,7 +20,7 @@
         android:padding="10dp"
         android:textColor="#eb6e44"
         android:text="@string/login_with_facebook"
-        android:drawableLeft="@drawable/facebook_icon"
+        android:drawableLeft="@drawable/facebook"
         android:drawablePadding="5dp"
         />
 </RelativeLayout>

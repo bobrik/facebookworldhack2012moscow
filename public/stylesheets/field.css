@@ -1,0 +1,70 @@
+.field-item {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.field-item .name {
+    font-size: 34px;
+    color: #eb6e44;
+    text-align: center;
+}
+
+.field-item .letter {
+    display: inline-block;
+    border-bottom: 1px solid #c5c7c3;
+    margin: 0 3px;
+    min-width: 30px;
+    font-size: 24px;
+    color: #66706e;
+}
+
+.hangman-canvas .avatar {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 25px;
+    position: absolute;
+    left: 120px;
+    top: 70px;
+    zoom: 1;
+}
+
+.hangman-canvas .avatar img {
+    width: 50px;
+    border-radius: 25px;
+}
+
+.hangman-canvas {
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+    height: 221px;
+    padding: 20px 0;
+}
+
+.hangman {
+    position: absolute;
+    margin: 0 auto;
+    width: 155px;
+    height: 221px;
+    overflow: hidden;
+    background: url(/images/hangman-sprite.png) no-repeat 155px 0;
+}
+
+.hangman-canvas.turn-0 .hangman {
+    background-position: 155px 0;
+}
+
+.hangman-canvas.turn-1 .hangman {
+    background-position: 0 0;
+}
+
+.hangman-canvas.turn-2 .hangman {
+    background-position: -155px 0;
+}
+
+.hangman-canvas.turn-3 .hangman {
+    background-position: -310px 0;
+}

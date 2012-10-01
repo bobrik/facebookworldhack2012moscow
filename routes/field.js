@@ -6,7 +6,32 @@
         res.render('field', {
             pageName : "field",
             title    : 'Game',
-            game  : {test: 1}
+            game  : {
+                user1: {
+                    name: "Андрей Мищенко",
+                    avatar: "http://photos-a.ak.fbcdn.net/hphotos-ak-snc6/178901_444075445612246_919694010_s.jpg",
+                    word: [
+                        "A",
+                        null,
+                        "C",
+                        null,
+                        "F"
+                    ]
+                },
+                user2: {
+                    name: "Иван Бобров",
+                    avatar: "http://photos-a.ak.fbcdn.net/hphotos-ak-ash3/536784_318518181551004_1840344979_s.jpg",
+                    word: [
+                        null,
+                        null,
+                        null,
+                        null,
+                        "C",
+                        null,
+                        "F"
+                    ]
+                }
+            }
         });
         /*
         var game = new Game(req.query.id, undefined, user.getStorage());
