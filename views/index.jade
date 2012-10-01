@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+    p#io Socket.IO connecting..
+    if token
+        p Hello, my friend!
+        a(href="/logout") logout
+    else
+        a(href="/auth/facebook") auth
+
+    script(type="text/javascript", src="/socket.io/socket.io.js")
+    script(type="text/javascript")
+        window.onload = function() {
+            var token = "#{token}",
+                state = document.getElementById("io");
+
+            var socket = io.connect(document.location.hostname + ":" + document.location.port);
+
+            socket.on("connect", function() {
+                console.log("connected");
+                state.innerHTML = "Connected! :)";
+            });
+
+            socket.on("disconnect", function() {
+                console.log("disconnected!");
+                state.innerHTML = "Disconnected! :)";
+            });
+        }
