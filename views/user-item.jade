@@ -1,5 +1,9 @@
-li
+li.item
     a(href="javascript:;", data-installed=item.installed)
+
+        if (!item.opponent)
+            img.arrow(src="/images/list of friends/RedArrow.png")
+
         if item.photo
              img(src=item.photo)
         else
