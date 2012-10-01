@@ -8,9 +8,7 @@ append page
 
 block content
     div#gameCreation
-        ul
-            for friend in friends
-                li
-                    div.name=friend.name
-                    img(src=friend.picture.data.url)
+        ul.friendsList
+            for item in friends
+                include user-item
 
