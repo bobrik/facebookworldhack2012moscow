@@ -29,7 +29,7 @@
                     return;
                 }
 
-                games[id].exportFor(user.getId(), function(error, data) {
+                games[id].exportFor(user, function(error, data) {
                     if (error) {
                         console.log(error);
                         exportGame();

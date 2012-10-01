@@ -11,7 +11,7 @@
                 return next(error);
             }
 
-            game.exportFor(user.getId(), function(error, data) {
+            game.exportFor(user, function(error, data) {
                 if (error) {
                     return next(error);
                 }
