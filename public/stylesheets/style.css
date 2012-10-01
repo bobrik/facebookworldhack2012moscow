@@ -1,6 +1,8 @@
 body {
     font: 14px "Trebuchet MS";
     background: url("/images/Background@2x.png") repeat-x;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -12,7 +14,7 @@ a {
     background: url("/images/NavBarBackground@2x.png") repeat-x;
 }
 
-#bar #settingsButtons, #bar #infoButton {
+#bar #settingsButton, #bar #infoButton {
     width: 64px;
     height: 62px;
     background: url("/images/NavBarBackground@2x.png") repeat-x;
