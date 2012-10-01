@@ -1,10 +1,17 @@
 li
-    if item.name
-        div.name=item.name
-    else
-        div.name=item.first_name
+    a(href="javascript:;", data-installed=item.installed)
+        if item.name
+            div.name=item.name
+        else
+            div.name=item.first_name
 
-    if item.photo
-         img(src=item.photo)
-    else
-        img(src=item.picture.data.url)
+        if item.photo
+             img(src=item.photo)
+        else
+            img(src=item.picture.data.url)
+
+        if (!item.opponent)
+            if (item.installed)
+                div.text Start game
+            else
+                div.text Invite to game
