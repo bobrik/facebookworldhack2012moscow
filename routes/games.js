@@ -11,7 +11,7 @@
                 result = {};
 
             (function exportGame() {
-                var id = ids.pop;
+                var id = ids.pop();
 
                 if (!id) {
                     return res.json({
