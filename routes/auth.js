@@ -20,7 +20,7 @@
                     return next(error);
                 }
 
-                user.setFacebookToken(req.token.query);
+                user.setFacebookToken(req.query.token);
                 user.save(function() {
                     req.session.fb_token = req.query.token;
                     req.session.fb_id    = profile.id;
