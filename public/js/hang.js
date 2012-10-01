@@ -170,10 +170,10 @@ var H = {
     },
 
     oghang: function(id){
-        FB.api("/me/hangergame:hang", {player:"http://web372.verumnets.ru/og_player?user_id=" + id});
+        FB.api("/me/hangergame:hang", "POST", {player:"http://web372.verumnets.ru/og_player?user_id=" + id});
     },
 
     ogguess: function(word){
-        FB.api("/me/hangergame:guess", {word: "http://web372.verumnets.ru/og_word?word=" + word})
+        FB.api("/me/hangergame:guess","POST", {word: "http://web372.verumnets.ru/og_word?word=" + word})
     }
 }
