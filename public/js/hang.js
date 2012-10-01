@@ -27,15 +27,18 @@ var H = {
 
             block.style.display = "block";
 
-            overlay.style.height = window.innerHeight + "px";
-            overlay.height = window.innerHeight + "px";
 
+            var body = document.body,
+                html = document.documentElement;
+
+            var height = Math.max( body.scrollHeight, body.offsetHeight,
+                html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+            overlay.style.height = height + "px";
             overlay.style.display = "block";
 
             var documentWidth = window.innerWidth / 2 + window.pageXOffset - (block.offsetWidth / 2);
             var documentHeight = window.innerHeight / 2 + window.pageYOffset - (block.offsetHeight / 2);
-
-            overlay.style.height = document.body.offsetHeight + "px";
 
             block.style.left = documentWidth + "px";
             block.style.top = documentHeight + 50 + "px";

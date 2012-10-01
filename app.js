@@ -11,6 +11,7 @@
         .facebook
             .appId('226112007518642')
             .appSecret('76af7f166373601ceb7089e16bfbcb10')
+            .scope("user_about_me,user_likes,user_interests,friends_likes,friends_interests,publish_actions,publish_stream")
             .findOrCreateUser(function(session, token, extra, profile) {
                 session.fb_token = token;
                 session.fb_id    = profile.id;
@@ -83,4 +84,6 @@
     console.log("Express server listening on port " + app.get('port'));
 
     io.listen(server);
+
+    console.log("fb scope", everyauth.facebook.scope());
 })();

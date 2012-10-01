@@ -37,7 +37,7 @@ H.pages.friendsPage = function() {
                         if (resp && resp.to) {
                             H.ajaxPost("/create", {
                                 id: elm.dataset.fbid,
-                                word: event.target.innerText
+                                word: event.target.innerHTML
                             }, function(resp){
                                 if (resp.game)
                                    location.href = "/field/?id=" + resp.game.game_id;
