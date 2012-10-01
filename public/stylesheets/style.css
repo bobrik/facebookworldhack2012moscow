@@ -30,7 +30,9 @@ a {
 
 #bar #settingsButton {
     float: right;
-    background: url("/images/list of friends/home.png") no-repeat;
+    background: url("/images/home.png") no-repeat;
+    border:1px solid #AFB225;
+    border-radius: 10px;
 }
 
 #popup {
