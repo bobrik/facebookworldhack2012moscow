@@ -7,7 +7,11 @@
             return next(new Error("No required params!"));
         }
 
+        console.log(req.body);
+        console.log("OOOooooo")
+
         function creator(id) {
+            console.log('aaaaa')
             user.createGame(id, req.body.word, function(error, game) {
                 if (error) {
                     return next(error);
