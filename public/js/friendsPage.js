@@ -38,9 +38,9 @@ H.pages.friendsPage = function() {
                             H.ajaxPost("/create", {
                                 id: elm.dataset.fbid,
                                 word: event.target.innerText
-                            }, function(game){
-                                if (game) {}
-                                  //  location.href = "/field/" + game.id;
+                            }, function(resp){
+                                if (resp.game)
+                                   location.href = "/field/?id=" + resp.game.game_id;
                             });
                         }
                     });
