@@ -66,6 +66,7 @@
     app.get("/", routes.index);
     app.get("/auth", routes.auth);
     app.get("/start", routes.start);
+    app.get("/friends", routes.friends);
     app.get("/games", routes.games);
     app.get("/game", routes.game);
     app.get("/move", routes.move);

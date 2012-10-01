@@ -8,8 +8,7 @@ append page
 
 block content
     div#gameCreation
-        ul
-            for friend in friends
-                li
-                    #{JSON.stringify(friend)}
+        ul.friendsList
+            for item in friends
+                include user-item
 

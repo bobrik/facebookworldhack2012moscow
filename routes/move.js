@@ -27,7 +27,7 @@
                         return next(error);
                     }
 
-                    game.exportFor(user.getId(), function(error, data) {
+                    game.exportFor(user, function(error, data) {
                         res.json({
                             good : good,
                             game : data

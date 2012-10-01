@@ -9,10 +9,6 @@ append page
 block content
     div#gameCreation
         a#startGame(href="javascript:;") Start game
-        ul
-            each game in games
-                li
-                    if game.move
-                        div#Turn Your turn
-                    else
-                        div#Turn Waiting opponent
+        ul.itemList
+            each item in games
+                include user-item
