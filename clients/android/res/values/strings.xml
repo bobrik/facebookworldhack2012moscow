@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hangman</string>
+    <string name="facebook_error">Facebook error %1$s [%2$s]: %3$s</string>
+    <string name="error">Error %1$s</string>
+    <string name="login_cancel">Login cancel</string>
+    <string name="menu_logout">Logout</string>
+    <string name="server_error">Server error. Try again later</string>
+    <string name="login_with_facebook">Login with Facebook</string>
+</resources>
