@@ -56,6 +56,7 @@ var H = {
 
 
     closest: function(nodeName, elm) {
+        elm && console.log (elm.nodeName, elm.parentNode)
         if (elm && elm.nodeName.toLowerCase() != nodeName.toLowerCase()) {
             if (elm && elm.parentNode) {
                  return H.closest(nodeName, elm.parentNode);
