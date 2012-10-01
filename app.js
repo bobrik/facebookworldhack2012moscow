@@ -51,6 +51,8 @@
     });
 
     app.get("/", routes.index);
+    app.get("/start", routes.start);
+
 
     var server = http.createServer(app);
 
