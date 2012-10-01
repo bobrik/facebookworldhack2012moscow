@@ -1,7 +1,7 @@
 (function(module) {
     var authorized = require("./authorized");
 
-    module.exports = function(req, res, next, user) {
+    module.exports = authorized(function(req, res, next, user) {
         if (!req.body.id || !req.body.word) {
             return next(new Error("No required params!"));
         }
@@ -21,5 +21,5 @@
                 });
             });
         });
-    };
+    });
 })(module);
