@@ -21,6 +21,7 @@
 
                 game.exportFor(user, function(error, data) {
                     console.log("bbbbbbb")
+                    console.log(error);
                     if (error) {
                         return next(error);
                     }
