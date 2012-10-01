@@ -107,6 +107,7 @@ a {
     border: 1px dotted #AFB225;
     padding: 5px;
     border-bottom-width: 0px;
+    clear: both;
 }
 
 .itemList li:last {
@@ -123,6 +124,7 @@ a {
 
 .ietmList .description {
     float: left;
+    padding-left: 7px;
 }
 
 .itemList .text {
