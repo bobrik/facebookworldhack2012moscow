@@ -34,6 +34,11 @@ var H = {
             block.style.left = documentWidth + "px";
             block.style.top = documentHeight + 50 + "px";
 
+            var close = block.querySelector(".close")
+            close.removeEventListener("click");
+            close.addEventListener("click", function(){
+                H.popup.hide(); //!!!!!
+            });
         },
 
         hide: function() {
