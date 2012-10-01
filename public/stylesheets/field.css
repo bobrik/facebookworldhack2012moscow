@@ -73,3 +73,18 @@
 .hangman-canvas.turn-3 .avatar img {
     border: 4px solid #eb6e44;
 }
+
+.keyboard {
+    width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    color: #66706e;
+}
+
+.keyboard .letter {
+    vertical-align: top;
+    display: inline-block;
+    min-width: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
