@@ -1,6 +1,7 @@
 H.pages.friendsPage = function() {
     var list = document.querySelector("ul.itemList");
     list.addEventListener("click", function(event){
+        list.removeEventListener("click");
 
         var cnt = "";
         var words = H.getWords();
@@ -17,13 +18,13 @@ H.pages.friendsPage = function() {
 
         var elms = document.querySelectorAll(".word");
 
-        for (var i in elms) {
-            elms[i].addEventListener("click", function(event){
+        for (var j in elms) {
+            elms[j].addEventListener("click", function(event){
                 H.popup.hide();
                 if (elm && elm.dataset.installed) {
                     H.ajaxPost("/create", {
                         id: elm.dataset.fbid,
-                        word: event.target.innerText
+                        word: event.target.innerTextf
                     });
 
                 } else {
