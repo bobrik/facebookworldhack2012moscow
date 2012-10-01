@@ -5,11 +5,11 @@
 
 #startGame {
     display: inline-block;
-    width:370px;
-    padding-left: 150px;
-    padding-top: 50px;
-    height:40px;
+    width:5200px;
+    padding-top: 20px;
+    height:70px;
     background: url("/images/list/ButtonStartGameNormal@2x.png") repeat-x;
     color: #AFB225;
     font-size: 40px;
+    text-align: center;
 }
