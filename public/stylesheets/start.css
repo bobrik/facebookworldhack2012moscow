@@ -6,8 +6,9 @@
 #startGame {
     display: inline-block;
     width:490px;
-    padding-left: 30px;
+    padding-left: 150px;
     height:90px;
     background: url("/images/list/ButtonStartGameNormal@2x.png") repeat-x;
     color: #AFB225;
+    font-size: 40px;
 }
