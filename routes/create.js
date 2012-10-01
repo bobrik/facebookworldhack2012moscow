@@ -8,7 +8,7 @@
         }
 
         function creator(id) {
-            user.createGame(opponent.getId(), req.body.word, function(error, game) {
+            user.createGame(id, req.body.word, function(error, game) {
                 if (error) {
                     return next(error);
                 }
