@@ -66,5 +66,66 @@ var H = {
             return elm;
         }
 
+    },
+
+    ajaxPost: function (url, data, callback) {
+        var xmlhttp = false;
+        var t = this;
+
+        try {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        } catch (E) {
+            xmlhttp = false;
+        }
+
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined') {
+            xmlhttp = new XMLHttpRequest();
+        }
+
+        var requestData = H.serialize(data, null);
+
+        xmlhttp.open('POST', url, true);
+
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.setRequestHeader("Content-length", requestData.length);
+        xmlhttp.setRequestHeader("Connection", "close");
+
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4) {
+                if (xmlhttp.status == 200) {
+                    try {
+                        var response = JSON.parse(xmlhttp.responseText);
+                        callback && callback(response);
+                    } catch (e) {
+                        if (!window.JSON) {
+                            // Подгрузить browser.js
+                        }
+                    }
+
+                }
+            }
+        };
+
+        xmlhttp.send(requestData);
+    },
+
+    /**
+     * Сериализация данных для отправки через POST запрос
+     *
+     * @private
+     * @param {Object} obj
+     *                  сереализуемый объект
+     * @param {String} prefix
+     *                  префикс имени
+     */
+    serialize: function(obj, prefix) {
+        var str = [];
+        for (var p in obj) {
+            var k = prefix ? prefix + "[" + p + "]" : p, v = obj[p];
+            str.push(typeof v == "object" ?
+                H.serialize(v, k) :
+                encodeURIComponent(k) + "=" + encodeURIComponent(v));
+        }
+        return str.join("&");
     }
 }
