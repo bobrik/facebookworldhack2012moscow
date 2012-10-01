@@ -51,6 +51,7 @@
     });
 
     app.get("/", routes.index);
+    app.get("/auth", routes.auth);
     app.get("/start", routes.start);
 
 

@@ -6,4 +6,6 @@
             token  : req.session.fb_token
         });
     };
+
+    module.exports.auth = require("./auth");
 })(module);
