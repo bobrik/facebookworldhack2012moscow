@@ -3,6 +3,7 @@
     display: inline-block;
     text-align: center;
     padding-bottom: 50px;
+    vertical-align: top;
 }
 
 .field-item .name {
@@ -67,4 +68,8 @@
 
 .hangman-canvas.turn-3 .hangman {
     background-position: -310px 0;
+}
+
+.hangman-canvas.turn-3 .avatar img {
+    border: 4px solid #eb6e44;
 }
