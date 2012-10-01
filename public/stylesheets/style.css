@@ -111,6 +111,8 @@ a {
     height:82px;
     color:#fd6e44;
     cursor: pointer;
+    list-style-position: outside;
+    margin: 0;
 }
 
 .itemList li:last-child {
