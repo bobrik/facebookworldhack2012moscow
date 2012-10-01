@@ -8,8 +8,12 @@ H.pages.fieldPage = function() {
             H.ajaxPost("/move", {
                 letter: event.target.innerHTML,
                 game_id: gameId
-            }, function(){
-                location.href = location.href;
+            }, function(response){
+                if (!response.fineshed) {
+
+                } else {
+                    location.href = location.href;
+                }
             });
         });
     }
