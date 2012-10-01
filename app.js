@@ -51,6 +51,7 @@
     });
 
     app.get("/", routes.index);
+    app.get("/auth", routes.auth);
 
     var server = http.createServer(app);
 
