@@ -22,6 +22,13 @@ var H = {
             var title = block.querySelectorAll(".title");
             title.innerText = props.title;
             block.style.display = "block";
+
+            var documentWidth = self.innerWidth / 2 + window.pageXOffset - (block.width / 2);
+            var documentHeight = self.innerHeight /2 + window.pageYOffset - (block.height / 2);
+
+            block.left = documentWidth + "px";
+            block.top = documentHeight + "px";
+
         },
 
         hide: function() {

@@ -37,6 +37,8 @@ a {
     display: none;
     position: absolute;
     top:100px;
+    width: 90%;
+    min-height: 300px;
 }
 
 #popup .title {
