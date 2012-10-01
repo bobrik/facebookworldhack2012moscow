@@ -28,6 +28,7 @@
 
                     console.log("tttt")
 
+
                     res.json({
                         game: data
                     });
