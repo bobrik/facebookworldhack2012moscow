@@ -1,6 +1,6 @@
 H.pages.friendsPage = function() {
     var list = document.querySelector("ul.itemList");
-    H.initFbAPI();
+
     list.addEventListener("click", function(event){
 
         var cnt = "";
