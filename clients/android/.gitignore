@@ -1,1 +1,4 @@
 /gen
+/out
+.DS_Store
+.idea
