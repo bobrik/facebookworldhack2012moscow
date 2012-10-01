@@ -100,3 +100,16 @@ a {
     border-radius: 10px;
     margin: 10px;
 }
+
+.itemList li {
+    list-style: none;
+    background: #eef1e9;
+    border: 1px solid #AFB225;
+    padding: 5px;
+}
+
+.itemList li img {
+    border-radius: 50px;
+    width: 50px;
+    friends: 50px;
+}
