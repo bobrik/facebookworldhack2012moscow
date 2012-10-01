@@ -1,12 +1,17 @@
 H.pages.fieldPage = function() {
-    var list = document.querySelector(".keyboard .letter"),
+    var list = document.querySelectorAll(".keyboard .letter"),
         gameId = document.querySelector("#field").dataset.gameid;
-    list.addEventListener("click", function(event) {
-        H.ajaxPost("/move", {
-            letter: event.target.innerHTML,
-            game_id: gameId
-        }, function(){
-            location.href = location.href;
+
+    for (var i in list) {
+        var key = list[i];
+        key.addEventListener("click", function(event) {
+            H.ajaxPost("/move", {
+                letter: event.target.innerHTML,
+                game_id: gameId
+            }, function(){
+                location.href = location.href;
+            });
         });
-    });
+    }
+
 };
