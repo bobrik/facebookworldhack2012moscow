@@ -17,6 +17,7 @@ a {
     height: 62px;
     background: url("/images/NavBarBackground@2x.png") repeat-x;
     margin: 15px;
+    display: block;
 }
 
 #bar #infoButton {
