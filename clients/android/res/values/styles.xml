@@ -1,0 +1,5 @@
+<resources>
+    <style name="HangmanTheme" parent="android:Theme.Light.NoTitleBar">
+        <item name="android:colorBackground">#F7F5EE</item>
+    </style>
+</resources>
