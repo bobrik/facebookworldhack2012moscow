@@ -1,11 +1,13 @@
 #gameCreation {
     width: 528px;
-    margin: 10px auto;
+    margin: 40px auto;
 }
 
 #startGame {
     display: inline-block;
-    width:528px;
+    width:490px;
+    padding-left: 30px;
     height:90px;
     background: url("/images/list/ButtonStartGameNormal@2x.png") repeat-x;
+    color: #AFB225;
 }
