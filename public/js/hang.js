@@ -24,8 +24,8 @@ var H = {
             title.innerText = props.title;
             content.innerHTML = props.content;
 
-            var documentWidth = window.innerWidth / 2 + window.pageXOffset - (block.width / 2);
-            var documentHeight = window.innerHeight /2 + window.pageYOffset - (block.height / 2);
+            var documentWidth = window.innerWidth / 2 + window.pageXOffset - (block.offsetWidth / 2);
+            var documentHeight = window.innerHeight /2 + window.pageYOffset - (block.offsetHeight / 2);
 
             console.log(documentWidth, documentHeight, block.width, title);
 
