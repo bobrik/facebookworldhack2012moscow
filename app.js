@@ -4,7 +4,8 @@
         http      = require('http'),
         path      = require('path'),
         everyauth = require("everyauth"),
-        io        = require("socket.io");
+        io        = require("socket.io"),
+        User      = require("./lib/User");
 
     everyauth
         .facebook
@@ -14,10 +15,21 @@
                 session.fb_token = token;
                 session.fb_id    = user.id;
 
+                var user = new User(user.id);
+                user.load(function(error) {
+                    if (error) {
+                        console.log(error);
+                        return;
+                    }
+
+                    user.setFacebookToken(token);
+                    user.save();
+                });
+
                 return {
                     fb_token : token,
                     fb_id    : user.id
-                };
+                }
             })
             .redirectPath('/');
 

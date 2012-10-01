@@ -1,5 +1,6 @@
 (function(module) {
-    var fb = require("fb-js");
+    var fb   = require("fb-js"),
+        User = require("../lib/User");
 
 
     module.exports = function(req, res, next) {
@@ -13,10 +14,20 @@
                 return next(error);
             }
 
-            req.session.fb_token = req.query.token;
-            req.session.fb_id    = profile.id;
+            var user = new User(profile.id);
+            user.load(function(error) {
+                if (error) {
+                    return next(error);
+                }
 
-            res.redirect("/");
+                user.setFacebookToken(req.token.query);
+                user.save(function() {
+                    req.session.fb_token = req.query.token;
+                    req.session.fb_id    = profile.id;
+
+                    res.redirect("/");
+                });
+            });
         });
     };
 })(module);
