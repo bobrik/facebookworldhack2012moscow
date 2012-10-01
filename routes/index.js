@@ -8,4 +8,5 @@
     };
 
     module.exports.auth = require("./auth");
+    module.exports.start = require("./start");
 })(module);
