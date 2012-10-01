@@ -22,6 +22,8 @@
                         return;
                     }
 
+                    console.log(user);
+
                     user.setFacebookToken(token);
                     user.setName(user.name);
                     user.save();
