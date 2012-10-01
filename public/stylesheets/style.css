@@ -128,6 +128,10 @@ a {
     padding-left: 7px;
 }
 
+.itemList .description .name {
+    color:#fd6e44;
+}
+
 .itemList .text {
     font-size: 14px;
     color: #696969;
@@ -135,6 +139,9 @@ a {
 
 .itemList .arrow {
     float: right;
+    margin-top: 22px;
+    margin-right: 5px;
+    width: 24px;
 }
 
 #bar h1 {
