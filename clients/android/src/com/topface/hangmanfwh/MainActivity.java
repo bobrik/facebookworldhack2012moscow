@@ -40,6 +40,8 @@ public class MainActivity extends Activity {
         Log.i(FacebookApi.TAG, "ShowWebView with token " + mFacebookApi.getToken());
         mWebView.setVisibility(View.VISIBLE);
         mLoginView.setVisibility(View.GONE);
+        mWebView.getSettings().setLoadWithOverviewMode(true);
+        mWebView.getSettings().setUseWideViewPort(true);
         mWebView.loadUrl(getAuthUrl(mFacebookApi.getToken()));
         //Set our webview client for override default callbacks
         mWebView.setWebViewClient(new WebViewClient() {
