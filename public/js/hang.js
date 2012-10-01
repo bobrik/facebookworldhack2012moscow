@@ -32,7 +32,7 @@ var H = {
             console.log(documentWidth, documentHeight, block.offsetWidth, title);
 
             block.style.left = documentWidth + "px";
-            block.style.top = documentHeight + "px";
+            block.style.top = documentHeight + 50 + "px";
 
         },
 

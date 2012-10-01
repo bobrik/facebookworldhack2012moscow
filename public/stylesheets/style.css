@@ -41,6 +41,7 @@ a {
     min-height: 300px;
     background: url("/images/Background@2x.png");
     border-radius: 10px;
+    border: 1px dashed #8dcdc1;
 }
 
 #popup .title {
